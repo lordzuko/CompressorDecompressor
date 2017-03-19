@@ -2,6 +2,7 @@ import sys
 from itertools import groupby
 
 def encode(data):
+
     compressed_str = "".join(['{0}{1}'.format(i, sum([1 for _ in e])) for i,e in groupby(data)])
     if len(compressed_str) > len(data):
         return data
